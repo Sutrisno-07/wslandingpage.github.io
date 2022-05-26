@@ -1,0 +1,27 @@
+.logos{
+
+    .logo{
+        text-align: center;              
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+
+            @include breakpoint(large){
+            width: 100%; 
+            flex-direction: row;      
+            justify-content: space-between;
+            align-items: center;
+            }
+
+        img{
+            margin-bottom: 55px;
+            transform: scale(0.85);
+
+            @include breakpoint (large){
+                transform: scale(1);
+            }
+        }        
+    }
+    
+}

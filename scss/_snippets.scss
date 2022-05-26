@@ -1,0 +1,66 @@
+.snippets{    
+    padding-bottom: 160px;
+    
+    &__content{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+
+
+        @include breakpoint(large){
+            grid-template-columns: 1.25fr 1fr;
+            gap: 55px;
+        }    
+    }
+
+    &__image{
+
+        img{
+            width: 100%;
+        }
+       
+        @include breakpoint(small){
+            img{
+                max-width: 550px;
+            }
+        }
+
+        @include breakpoint(large){
+            img{
+                max-width: 100%;
+                transform: translateX(-30px);
+            }
+        }
+    }
+
+    &__columns{
+        text-align: center;
+        justify-self: center;
+
+        @include breakpoint(small){
+            text-align: center;
+            align-self: center;          
+        }
+
+        @include breakpoint(large){
+            text-align: left;
+            justify-self: left;
+        }
+   
+        &-features{
+            max-width: 400px;
+            border: 1px solid green;
+
+            @include breakpoint(large){
+                :last-child{
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+
+
+
+
+   
+}

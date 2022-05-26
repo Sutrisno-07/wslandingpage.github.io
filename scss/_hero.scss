@@ -1,0 +1,39 @@
+.hero{
+    padding-top: 120px;
+    
+    @include breakpoint(large){
+        padding-top: 130px;
+    }
+
+    &__logo{
+        margin-bottom: 55px;
+    }
+
+    h1{
+
+        @include breakpoint(large){
+            br{
+                display: none;
+            }
+        }
+    }
+    
+    &__cta{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include breakpoint(small){
+            display: block;
+        }
+
+        button:first-child{
+            margin-bottom: 20px;
+
+            @include breakpoint(small){
+                margin-bottom: 0px;
+                margin-right: 16px;
+            }
+        }
+    }
+}
